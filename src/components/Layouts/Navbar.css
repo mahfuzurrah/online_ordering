@@ -38,12 +38,12 @@
   transition: all 0.5s ease-in-out;
 }
 
-.toggle_btn{
+.toggle_btn {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  .toggle_btn{
+  .toggle_btn {
     display: block;
   }
   .navbar .nav {
@@ -51,7 +51,8 @@
   }
   .navbar .nav_menu {
     position: absolute;
-    top: 100%;
+    top: 75px;
+    left: -100%;
     width: 100%;
     padding: 50px 30px;
     background: #000000;
@@ -59,12 +60,14 @@
     border-radius: 24px;
     opacity: 0;
     transition: all 0.5s ease-in-out;
+    z-index: -999;
   }
 
-  ul.nav_menu.active{
-    top: 75px;
+  ul.nav_menu.active {
+    left: 0;
     opacity: 1;
     transition: all 0.5s ease-in-out;
+    z-index: 0;
   }
 
   .navbar .nav .nav_menu .nav_list .nav_link {
